@@ -1,17 +1,16 @@
-// let participantes = [{}]
 let participantes = [
   {
     nome: "Diego Fernandez",
     email: "diego@gmail.com",
-    dataInscricao: new Date(2024, 2, 01, 19, 23),
-    dataCheckIn: new Date(2024, 2, 01, 20, 20)
+    dataInscricao: new Date(2024, 2, 1, 19, 23),
+    dataCheckIn: new Date(2024, 2, 1, 20, 20)
   },
 
   {
   nome: "Gabrielle Oliveira",
   email: "Gabrielle@gmail.com",
-  dataInscricao: new Date(2024, 1, 02, 19, 23),
-  dataCheckIn: new Date(2024, 1, 05, 20, 20)
+  dataInscricao: new Date(2024, 1, 2, 19, 23),
+  dataCheckIn: new Date(2024, 1, 5, 20, 20)
   },
 
   {
@@ -127,7 +126,7 @@ const adicionarParticipante = (event) => {
       nome: dadosDoFomurlario.get('nome'),
       email: dadosDoFomurlario.get('email'),
       dataInscricao: new Date(),
-      dataCheckIn: null //não existe ainda então nulo
+      dataCheckIn: null //não existe ainda entá nulo
     }
 
     //verificar de participante existe 
@@ -155,8 +154,6 @@ const fazerCheckIn = (event) => {
   if(confirm(mensagemConfirmacao) == false) {
     return 
   }
-
-  alert(resultado)
 
   //encontrar o participante dentro da lista
   const participante = participantes.find(
